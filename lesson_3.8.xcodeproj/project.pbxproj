@@ -13,6 +13,8 @@
 		45833B1029476C2900B0C0CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45833B0E29476C2900B0C0CD /* Main.storyboard */; };
 		45833B1229476C2A00B0C0CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45833B1129476C2A00B0C0CD /* Assets.xcassets */; };
 		45833B1529476C2A00B0C0CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45833B1329476C2A00B0C0CD /* LaunchScreen.storyboard */; };
+		459F00702947702F00159095 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F006F2947702F00159095 /* ToDoTableViewCell.swift */; };
+		459F0072294776B600159095 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459F0071294776B600159095 /* model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		45833B1129476C2A00B0C0CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45833B1429476C2A00B0C0CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45833B1629476C2A00B0C0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		459F006F2947702F00159095 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		459F0071294776B600159095 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				45833B0829476C2900B0C0CD /* AppDelegate.swift */,
 				45833B0A29476C2900B0C0CD /* SceneDelegate.swift */,
 				45833B0C29476C2900B0C0CD /* ViewController.swift */,
+				459F006F2947702F00159095 /* ToDoTableViewCell.swift */,
+				459F0071294776B600159095 /* model.swift */,
 				45833B0E29476C2900B0C0CD /* Main.storyboard */,
 				45833B1129476C2A00B0C0CD /* Assets.xcassets */,
 				45833B1329476C2A00B0C0CD /* LaunchScreen.storyboard */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459F0072294776B600159095 /* model.swift in Sources */,
 				45833B0D29476C2900B0C0CD /* ViewController.swift in Sources */,
 				45833B0929476C2900B0C0CD /* AppDelegate.swift in Sources */,
 				45833B0B29476C2900B0C0CD /* SceneDelegate.swift in Sources */,
+				459F00702947702F00159095 /* ToDoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +303,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +311,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Akai-Aliev.lesson-3-8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,6 +335,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +343,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Akai-Aliev.lesson-3-8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
