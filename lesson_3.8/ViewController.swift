@@ -17,12 +17,25 @@ class ViewController: UIViewController {
                          Task(image: "circle", task: "Убраться дома")]
     
     var filteredTasks: [Task] = []
+    var addButton = UIButton(type: .system)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "to do"
         navigationController?.navigationBar.prefersLargeTitles = true
+        addButton.setTitleColor(.white, for: .normal)
+        addButton.setTitle("+", for: .normal)
+        addButton.layer.cornerRadius = 80 / 2
+        addButton.backgroundColor = .systemBlue
+        addButton.addTarget(self, action: #selector(addButtonTap), for: .touchUpInside)
+        addButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        view.addSubview(addButton)
+        addButton.translatesAutoresizingMaskIntoConstraints = false // подключает адаптивную верстку, дает возможность задать параметры
+        addButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true //отступ снизу
+        addButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -30).isActive = true // отступ справа
+        addButton.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        addButton.widthAnchor.constraint(equalToConstant: 80).isActive = true
         
         //toDoTableView.backgroundColor = .blue
         // Do any additional setup after loading the view.
@@ -38,7 +51,7 @@ class ViewController: UIViewController {
             self.filteredTasks = self.tasks
             self.toDoTableView.reloadData()
         }
-        let cancel = UIAlertAction(title: "Отмена", style: .cancel) { action in () }
+        let cancel = UIAlertAction(title: "Отмена", style: .destructive) { action in () }
         alert.addAction(addNewTask)
         alert.addAction(cancel)
         present(alert, animated: true)
